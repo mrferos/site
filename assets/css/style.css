@@ -1,0 +1,58 @@
+.theme-defaults {
+    --prime: #ff3e00
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+html {
+    /*font-size: calc(min(1vw, 15px));*/
+    filter: saturate(60%);
+}
+
+body {
+    font-family: Overpass, sans-serif;
+    font-weight: 400;
+    margin: auto;
+    max-width: 940px;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    color: var(--prime);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    line-height: 40px;
+    width: 50px;
+}
+
+nav li:first-child {
+    width: 165px;
+    margin-right: 10px;
+}
+
+.content-type-blog p {
+    padding: 5px;
+}
+
+.content-type-blog h1 {
+    padding: 5px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Andres Galindo | {{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<style>
+    #header-avatar {
+        height: 75px;
+        width: 75px;
+        border-radius: 15em;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--prime);
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        width: auto;
+        margin-left: 10px;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--prime);
+    }
+
+    p {
+        margin-bottom: 1em;
+    }
+</style>
+<body class="theme-defaults">
+<header>
+    <img id="header-avatar" alt='Borat' src='/assets/img/agalindo-avatar.png' width="75px" height="75px">
+    <p><a href="/">Andres Galindo</a></p>
+</header>
+
+<main class="content-type-page">
+    {{ content | safe }}
+</main>
+
+<footer>
+    <!-- Footer content can be added here -->
+</footer>
+</body>
+</html>
