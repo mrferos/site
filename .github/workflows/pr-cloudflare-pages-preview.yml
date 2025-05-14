@@ -1,6 +1,6 @@
-name: Deploy to Cloudflare Pages
+name: pr-cloudflare-pages-preview.yml
 on:
-  push:
+  pull_request:
     branches:
       - main
 jobs:
@@ -19,9 +19,9 @@ jobs:
         run: npm ci
       - name: Build site
         run: npm run build
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy preview to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy _site --project-name=parked
+          command: pages deploy _site --project-name=parked --branch=${{ github.head_ref || github.ref_name }}
