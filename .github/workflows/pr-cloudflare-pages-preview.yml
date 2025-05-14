@@ -24,12 +24,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy _site --project-name=parked --branch="${BRANCH_NAME}"
-        env:
-          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-      - name: Comment with URI to preview site
-        uses: mshick/add-pr-comment@v2.8.2
-        with:
-          message: |
-            ## Preview Environment! 
-            **URI:** https://${{ github.head_ref || github.ref_name }}.parked-egh.pages.dev
+          command: pages deploy _site --project-name=parked --branch=${{ github.head_ref || github.ref_name }}
