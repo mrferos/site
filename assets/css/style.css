@@ -10,16 +10,19 @@
 }
 
 html {
-    /*font-size: calc(min(1vw, 15px));*/
     filter: saturate(60%);
 }
 
 body {
-    font-family: Overpass, sans-serif;
+    font-family: "Source Code Pro", monospace;
     font-weight: 400;
     margin: auto;
     max-width: 940px;
     text-rendering: optimizeLegibility;
+}
+
+header, h1, h2, h3, h4, h5, h6 {
+    font-family: "Oswald", sans-serif;
 }
 
 a {
